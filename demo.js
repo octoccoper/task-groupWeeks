@@ -30,6 +30,7 @@ function drawChart() {
   while (currentDate < lastDate) {
     const day = currentDate.toISOString().substr(0, 10);
     const original = data.find(n => n.date === day) || { count: null };
+    console.log(result);
     const aggregated = result.find(n => n.weekStart === day) || { count: null };
     entry.addRow([
       currentDate,

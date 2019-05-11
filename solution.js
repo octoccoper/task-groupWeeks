@@ -6,5 +6,5 @@ function groupWeeks(data) {
 
   return data
     .filter((_, idx) => idx % 2)
-    .map(v => ({ weekStart: v, count: v.count * Math.random() }));
+    .map(v => ({ weekStart: v.date, count: v.count * Math.random() }));
 }
