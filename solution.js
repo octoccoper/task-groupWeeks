@@ -1,10 +1,20 @@
 function groupWeeks(data) {
-  // Это неправильное решение! Просто заглушка чтобы
-  // продемонстрировать что будет на экране
-  // Не ищите здесь сакрального смысла или "основы" -
-  // здесь все надо переписать :)
+  let groupedDate = [];
 
-  return data
-    .filter((_, idx) => idx % 2)
-    .map(v => ({ weekStart: v.date, count: v.count * Math.random() }));
+  data.forEach(element => {
+    let currentArrDate = new Date(element.date);
+
+    if (currentArrDate.getDay() === 1) {
+      console.log("day of the week: Monday!", currentArrDate.getDay());
+      groupedDate.push(element.date);
+    }
+
+    console.log("date", currentArrDate);
+
+    console.log("element.date", element.date);
+
+    console.log("element.count", element.count);
+
+    console.log("groupedDate:", groupedDate);
+  });
 }
